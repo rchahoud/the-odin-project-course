@@ -1,0 +1,19 @@
+* {
+  background-color: #b4dcff;
+  font-family: Arial, Serif;
+}
+
+h1 {
+ text-align: center;
+ color: rgb(95, 71, 36);
+ font-weight: 900;
+}
+
+.recipe-list {
+  text-align: center;
+  font-weight: bold;
+}
+
+.list {
+  align-items: center;
+}
