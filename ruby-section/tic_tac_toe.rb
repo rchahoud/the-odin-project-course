@@ -62,7 +62,6 @@ class Table
 
 		false
 	end
-
 end
 
 class Player
