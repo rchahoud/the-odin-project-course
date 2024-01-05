@@ -4,7 +4,7 @@ class Gallows
 
   def initialize()
     @secret_word = generate_random_word()
-    puts "random word: #{@secret_word}"
+    #puts "random word: #{@secret_word}"
     @hidden_word = set_blank_word(@secret_word)
     @lives = 5
     @used_letters = []
@@ -78,7 +78,6 @@ class Player
     try = gets.downcase.chomp
     puts "\n"
 
-    puts try.length
     while try.length != 1
       puts "Invalid input."
       make_guess(gallows)
@@ -118,11 +117,11 @@ class Hangman
   def check_winner()
 
     if @gallows.lives == 0
-      puts "Gallows won"
-      endgame()
+      puts "Gallows won. The word is: #{@gallows.secret_word}"
+      end_game()
     elsif @gallows.hidden_word == @gallows.secret_word
-      puts "Player won"
-      endgame()
+      puts "Player won. The word is: #{@gallows.secret_word}"
+      end_game()
     end
 
   end
