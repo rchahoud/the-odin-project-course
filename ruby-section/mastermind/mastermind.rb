@@ -1,4 +1,6 @@
-#falta incluir a inteligencia do cpu como code breaker
+# This project is not finalized
+
+# Falta incluir a inteligencia do cpu como code breaker
 class Board
   attr_accessor :rows
   COLORS = %w[red green blue yellow purple pink]
@@ -46,7 +48,7 @@ class CpuCodeMaker
   def check_accuracy(play, board, round)
     play.each_with_index do |v, i|
       if v == @secret_code[i]
-        #colocar a função modify board ao invés de utilizar a variável diretamente
+        # Colocar a função modify board ao invés de utilizar a variável diretamente
         board.rows[round-1][1][i] = "black"
       elsif @secret_code.include?(v) && v != @secret_code[i]
         board.rows[round-1][1][i] = "white"
@@ -103,7 +105,7 @@ class PlayerCodeBreaker
       puts "Do your play: [color1] [color2] [color3] [color4]"
       play = gets.split.map(&:downcase)
       puts "\n"
-      #falta checar as cores nesse if
+      # Falta checar as cores nesse if
       if play.length == 4
         board.modify_board(play, round, 0)
         return play
